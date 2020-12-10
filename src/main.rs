@@ -52,7 +52,7 @@ fn main() {
     }
 }
 
-
+/* error generate function when a 2nd argument is invalid value*/
 fn missing_role(){
     error!("Please specify server or client on the 2nd argument.");
     std::process::exit(1);
