@@ -26,6 +26,7 @@ fn main() {
         "tcp"=> match role {
             "server" => {
                 // call tcp server
+                tcp_server::serve(address).unwrap_or_else(|e|error!("{}",e));
             }
             "client" =>{
                 // call tcp client
