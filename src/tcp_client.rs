@@ -1,8 +1,6 @@
-use std::io{self,BufRead,BufReader,Write};
+use std::io::{self,BufRead,BufReader,Write};
 use std::net::TcpStream;
 use std::str;
-
-use failure::Fail;
 
 /* rake connection directed IP address and Port */
 pub fn connect (address: &str) -> Result<(), failure::Error>{
