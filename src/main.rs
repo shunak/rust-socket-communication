@@ -15,7 +15,7 @@ fn main() {
     let args: Vec<String> = env::args().collect();
 
     if args.len() !=4 {
-        error!("Please specify [tcp | udp] [server|client] [addr:port]".);
+        error!("Please specify [tcp | udp] [server|client] [addr:port].");
         std::process::exit(1);
     }
     let protocol: &str = &args[1];
