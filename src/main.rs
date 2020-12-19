@@ -30,6 +30,7 @@ fn main() {
             }
             "client" =>{
                 // call tcp client
+                tcp_client::connect(address).unwrap_or_else(|e| error!("{}",e));
             }
             _ => {
                 missing_role();
