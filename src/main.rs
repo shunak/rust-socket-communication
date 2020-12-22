@@ -39,6 +39,7 @@ fn main() {
         "udp" => match role {
            "server" => {
                // call udp server
+               udp_server::serve(address).unwrap_or_else(|e| error!("{}",e));
            }
            "client" => {
                //call udp client
