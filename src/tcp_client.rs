@@ -9,7 +9,7 @@ pub fn connect (address: &str) -> Result<(), failure::Error>{
         /* send input data from socket*/
         let mut input = String::new();
         io::stdin().read_line(&mut input)?;
-        stream.write_all(input.as_bytes())?;
+        stream.write_all(input.as_bytes())?;// encode byte stream to appropriate format
         /* display received data from socket */
         let mut reader = BufReader::new(&stream);
         let mut buffer = Vec::new();
@@ -17,6 +17,7 @@ pub fn connect (address: &str) -> Result<(), failure::Error>{
         print!("{}",str::from_utf8(&buffer)?);
     }
 }
+
 
 
 
